@@ -1,0 +1,228 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Load",                        IDM_LOAD
+        MENUITEM "Save",                        IDM_SAVE
+        MENUITEM "New Game",                    IDM_NEW
+        MENUITEM "Exit",                        IDM_EXIT
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Sound",                       IDM_OPTIONS_SOUND, CHECKED
+        MENUITEM "Planets",                     IDM_OPTIONS_PLANETS
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Help",                        ID_HELP_HELP
+        MENUITEM "About",                       IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APP_ICON            ICON    DISCARDABLE     "icon1.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_EMPIRE_1            BITMAP  DISCARDABLE     "Art\\empire1.bmp"
+IDB_EMPIRE_2            BITMAP  DISCARDABLE     "Art\\empire2.bmp"
+IDB_EMPIRE_3            BITMAP  DISCARDABLE     "Art\\empire3.bmp"
+IDB_EMPIRE_4            BITMAP  DISCARDABLE     "Art\\empire4.bmp"
+IDB_FACTORY             BITMAP  DISCARDABLE     "Art\\factory.bmp"
+IDB_FORT                BITMAP  DISCARDABLE     "Art\\fort.bmp"
+IDB_LARGE_PLANET        BITMAP  DISCARDABLE     "Art\\largeplanet.bmp"
+IDB_MEDIUM_PLANET       BITMAP  DISCARDABLE     "Art\\medplanet.bmp"
+IDB_SMALL_PLANET        BITMAP  DISCARDABLE     "Art\\smallplanet.bmp"
+IDB_LOGO                BITMAP  DISCARDABLE     "Art\\Logo3.bmp"
+IDB_INTRO               BITMAP  DISCARDABLE     "Art\\Intro.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_RULE_PLANET DIALOGEX 0, 0, 199, 82
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rule Planet"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Done",IDOK,131,54,50,14
+    CONTROL         111,IDB_FORT_BMP,"Static",SS_BITMAP,52,40,11,10
+    GROUPBOX        "Infrastructure",IDC_STATIC,7,7,185,68
+    PUSHBUTTON      "Build Fort",IDC_FORT_BUTTON,16,55,50,14
+    PUSHBUTTON      "Build Factory",IDC_FACTORY_BUTTON,73,54,50,14
+    CONTROL         110,IDC_STATIC,"Static",SS_BITMAP,108,39,11,10
+    EDITTEXT        IDC_EDIT_NUM_FACTORIES,73,36,31,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_NUM_FORTS,16,36,26,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_PLANET_NAME,13,17,169,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+END
+
+IDD_PLANET_INFO DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Planet Info"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    CONTROL         120,IDD_ABOUT,"Static",SS_BITMAP,7,7,99,91
+END
+
+IDD_PLANETS DIALOG DISCARDABLE  0, 0, 186, 105
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Planets"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    LTEXT           "Planet Options:",IDC_STATIC,16,13,49,8
+    CONTROL         "Build Automatically",IDC_BUILD_CHK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,26,75,10
+    CONTROL         "Build Forts First",IDC_FORTS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,18,62,63,10
+    CONTROL         "Build Factories First",IDC_FACTORIES_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,18,73,77,10
+    GROUPBOX        "Build Order",IDC_STATIC,13,48,159,50
+    CONTROL         "Alternate",IDC_ALTERNATE_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,18,85,44,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_RULE_PLANET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_PLANET_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PLANETS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_LAUNCH_WAVE         WAVE    DISCARDABLE     "Sounds\\launch.wav"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
